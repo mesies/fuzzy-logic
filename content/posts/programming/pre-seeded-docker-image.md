@@ -5,7 +5,7 @@ tags: [docker]
 draft: false
 ---
 
-# Introduction
+### Introduction
 
 On our company we wanted to create an easy way for someone to run our web application
 through docker compose for demo/qa purposes, but there was a tiny problem.
@@ -15,7 +15,7 @@ has a lengthy registration process. When someone uses the demo script for the fi
 database container is deleted when a new version is released, he has to waste several minutes in order to
 register our local application with the authentication server.
 
-# The Idea
+### The Idea
 
 What if the server seeded the db when it ran?
 
@@ -24,13 +24,13 @@ We cannot change the code of the other team!
 There is another... point, that can be used to inject logic;
 The entrypoint of the docker image!
 
-# Execution
+### Execution
 
 We just have to create a bash script that will include our seeding logic and then create another
 dockerfile that has the original docker image as base but will have the special entrypoint that will 
 execute the below script instead.
 
-### entrypoint.sh
+#### entrypoint.sh
 
 ```bash
 #!/bin/bash
@@ -58,7 +58,7 @@ fi
 dotnet Web.Server.dll
 ```
 
-### dockerfile
+#### dockerfile
 
 ```dockerfile
 FROM *REDACTED*.azurecr.io/*REDACTED*
@@ -81,6 +81,8 @@ EXPOSE 443
 
 ENTRYPOINT [ "/bin/bash","./entrypoint.sh" ]
 ```
+
+### Considerations
 
 The downside of the above
 idea is that instead of just using the image of the external service, we have to maintain our own
