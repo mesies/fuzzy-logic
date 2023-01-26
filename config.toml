@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://mesies.github.io"
 languageCode = "en-us"
 theme = "poison"
 paginate = 5
