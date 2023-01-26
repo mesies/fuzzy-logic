@@ -1,6 +1,7 @@
 ---
 title: "Creating a pre-seeded sql docker image"
 date: 2023-01-13T21:07:19+02:00
+tags: [docker]
 draft: false
 ---
 
@@ -29,8 +30,9 @@ We just have to create a bash script that will include our seeding logic and the
 dockerfile that has the original docker image as base but will have the special entrypoint that will 
 execute the below script instead.
 
+### entrypoint.sh
+
 ```bash
-# entrypoint.sh
 #!/bin/bash
 
 if [ ! -f "/tmp/.data-seeded" ]; then
@@ -46,14 +48,6 @@ if [ ! -f "/tmp/.data-seeded" ]; then
     echo '1' >/tmp/.data-seeded
 fi
 
-if [ ! -f "/tmp/.certificate-trusted" ]; then
-  echo 'INFO : Starting trusting certificate!' &&
-    cp /tmp/certs-to-trust/Server.crt /usr/local/share/ca-certificates/Server.crt &&
-    update-ca-certificates &&
-    echo 'INFO : Finished trusting certificate!' &&
-    echo '1' >/tmp/.certificate-trusted
-fi
-
 if [ ! -f "/tmp/.data-seeded" ]; then
   echo '#####'
   echo 'ERROR : Data was not seeded! this should not happen, contact dev team'
@@ -61,20 +55,14 @@ if [ ! -f "/tmp/.data-seeded" ]; then
   exit 1
 fi
 
-if [ ! -f "/tmp/.certificate-trusted" ]; then
-  echo '#####'
-  echo 'ERROR : Certificate was not trusted! this should not happen, contact dev team'
-  echo '#####'
-  exit 1
-fi
-
 dotnet Web.Server.dll
 ```
+
+### dockerfile
 
 ```dockerfile
 FROM *REDACTED*.azurecr.io/*REDACTED*
 
-COPY ["./appsettings.Production.json","."]
 COPY ["./seed.sql","."]
 COPY ["./entrypoint.sh","."]
 
