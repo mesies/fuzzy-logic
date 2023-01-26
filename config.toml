@@ -3,6 +3,7 @@ languageCode = "en-us"
 theme = "poison"
 paginate = 5
 pluralizelisttitles = false
+title = "Fuzzy Logic"
 
 [params]
     brand = "Fuzzy Logic" # name of your site - appears in the sidebar
@@ -23,12 +24,7 @@ pluralizelisttitles = false
 
     # Links to your socials.  Delete any you don't need/use. 
     github_url = "https://github.com"
-    linkedin_url = "https://linkedin.com"
-    twitter_url = "https://twitter.com"
-    discord_url = "https://discord.com"
-    youtube_url = "https://youtube.com"
-    instagram_url = "https://instagram.com"
-    facebook_url = "https://facebook.com"
+    # linkedin_url = "https://linkedin.com"
 
     # Hex colors for your sidebar.
     sidebar_bg_color = "#202020"            # default is #202020
