@@ -7,7 +7,7 @@ title = "Fuzzy Logic"
 
 [params]
     brand = "Fuzzy Logic" # name of your site - appears in the sidebar
-    brand_image = "/grumpy.jpg"    # path to the image shown in the sidebar
+    brand_image = "/fuzzy-logic/grumpy.jpg"    # path to the image shown in the sidebar
     description = "Grumpy and petty!"
     dark_mode = false
 
