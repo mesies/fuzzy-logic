@@ -1,4 +1,4 @@
-baseURL = "https://mesies.github.io/fuzzy-logic/"
+baseURL = "/"
 languageCode = "en-us"
 theme = "poison"
 paginate = 5
