@@ -6,5 +6,8 @@ tags: [Rants, DI]
 ---
 
 On all teams I ever worked there was a constant debate on how should services be registered on the di container, and 
-that annoys me to this day.
+that annoys me to this day. 
+
 When there was any kind of state, there was no debate, it was obvious. But when there wasn't any; thats when the party started.
+So, I am trying to do what little I can, from this tiny platform in order to put this debate to rest.
+

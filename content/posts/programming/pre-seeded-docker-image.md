@@ -7,7 +7,7 @@ draft: false
 
 ### Introduction
 
-On our company we wanted to create an easy way for someone to run our web application
+On our company we wanted to create an easy way for someone to run our web application (ASP.NET Core backend + Blazor frontend)
 through docker compose for demo/qa purposes, but there was a tiny problem.
 
 Our web application uses an in-house authentication server docker image that
