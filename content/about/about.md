@@ -9,4 +9,4 @@ My name is Leo, a software developer based in the Balkans. My love for programmi
 I tend to be an easy going person, but when programming is involved, sometimes I let my feelings get the better of me, I can easily be annoyed by the smallest, 
 least important things (alas the "Grumpy and petty!").
 
-Welcome to Fuzzy Logic(™)(©) my personal fuming and occasionally educational space
+Welcome to Fuzzy Logic(™)(©)
