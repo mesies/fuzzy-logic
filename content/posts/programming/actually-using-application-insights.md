@@ -24,5 +24,5 @@ Don't get me wrong, someone could very well read the logs, but in a production s
 2 Create a preprocessor to ignore calls that have no value, e.g. robots.txt etc.
 3 Create a preprocessor to add trace identifier to all telemetry items, yes yes all items have already operationId, but if you use traces for your logs
 
--- insert code example
+-- insert code example?
 -- maybe redo this with opentelemetry?
