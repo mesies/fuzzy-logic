@@ -1,9 +1,13 @@
 baseURL = "https://mesies.github.io/fuzzy-logic/"
 languageCode = "en-us"
 theme = "poison"
-paginate = 5
 pluralizelisttitles = false
 title = "Fuzzy Logic"
+
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = 'page'
 
 [params]
     brand = "Fuzzy Logic" # name of your site - appears in the sidebar
